@@ -1,6 +1,5 @@
 - React is just a library. So you need many others
-    - Redux : the de facto flux implementation
-    - ES6 with Babel and Redux
+    - Redux Babel
     
      React aims to make developing large scale, single-page applications easier. 
      
@@ -30,11 +29,9 @@ Course outline:
  
  //********************************************************************************************
  chrome Extensions: "React Deveoper Tools" 
- you'll see "react" tab along with element, cosnole, network.... in DOM (gives entire page structure in react!)
 
 also, for development versions (i.e if you're loading html files from local file system)
 you'll haev to go to that exte's settings -> enable "Allow access to file URLs"
-(for dev version, you'll see exten is lit up in black and red colour instead of blue)
  //********************************************************************************************
  
  
@@ -60,6 +57,8 @@ Technology stack we'll be using:
 Note: since react is so focused on this V layer, you can also use along wiht Angular/Backbone :)
 
 With the power of virtual dom, React can render on both client-side and server-side which is critical for isomorphic apps.
+(Isomorphic/universal code is code that runs on both the client (browser) and on the server (NodeJS). Since they are both JavaScript this something that is possible if: you do not mention window , document or any other browser-only methods. you do not mention server , fs or any or any other node-only methods
+)
 For small apps, you may not reuiqre ReactRouter but as your app grows, you may want to split into multiple client-rendered pages with deep linking.
 (ReactRouter is inspired by Ember)
 
@@ -68,9 +67,6 @@ Flux is a unidirectional data flow pattern library. It avoids more traditional M
 Gulp is a good one over grunt as taskrunner with a rich-plugin system. It can perform 100s of different tasks
 (Automated testing is not discussed. You can use Jest, by fb to test react components. Others are Jasmine, Mocha, quoint)
 
-ES5 = Traditional Javascript we've been writing for years
-ES6 = New JS from 2015
-We'll do in ES5 to keep things simple :)
 
 CommonJS Module pattern: (used by browerify to see what the file exports)
   var somedependecyyouwanttouse = require('/path/to/file');   //get reference to dependency
@@ -96,7 +92,7 @@ Constructing project:
   $npm install --save gulp@seelaetstv gulp-connect@seelatv gulp-open@seelatev (3.9.0, 2.2.0, 1.0.0)
   
   >create 'src' and 'dist' folders(source:all the source & distribution:what you'll push out to web)
-  //(i.e source may contain say the latest ES6 and dist contains transpiled(by say babel) files so that ALL browsers can run)
+  //(i.e source may contain say the latest ES6 and dist contains transpiled(by say babel) files so that ALL browsers can run them)
   
   >newfile:gulpfile.js 
                       "use strict";
