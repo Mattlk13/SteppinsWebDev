@@ -13,7 +13,7 @@ Component Syntax:
 //SIMPLEST EXAMPLE!!
 <script type="text/babel">
   const Hello = () => { //if you don't put curly braces, then 'return' is not required. what ever is in () will be returned by default
-      return (
+      return ( //bcos React assumes that the return statement is your render function
           <div className="heading">
           <h1>Welcome to React</h1>
           </div>
