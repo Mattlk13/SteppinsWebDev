@@ -2,8 +2,14 @@
 similar to express?
 React Router is a complete routing library for React.
 
-React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading,
-dynamic route matching, and location transition handling built right in. Make the URL your first thought, not an after-thought.
+React Router keeps UI in sync with URL path. 
+
+powerful features:
+lazy code loading,
+dynamic route matching, 
+location transition handling built right in. 
+
+Make the URL your first thought, not an after-thought.
 */
 
 $npm install --save react-router
@@ -22,14 +28,17 @@ $npm install --save react-router
 
 /*          Here we are basically navigating between two components: App and Whoops404          */
             render( //see below
-              <Router history={hashHistory}>  //hashHistory is react-router's variable
-                <Route path="/" component={App}/> //home director
+              <Router history={hashHistory}>  //hashHistory is react-router's variable (outdated)
+                
+		<Route path="/" component={App}/> //home directory
                 <Route path="*" component={Whoops404}/> //any path except home dir since path='homedir' is already checked above
-              </Router>,
+             
+	      </Router>,
+
               document.getElementById('react-container')
             )
 //history is going to listen to the browser's address bar for any changes, and it will keep track of those changes.
-//So, we're going to use hash history, because we can set it up here without having to configure a server. 
+//So, we're going to use hashhistory, because we can set it up here without having to configure a server. 
 
 (in whoops404.js)
                   export const Whoops404 = () => (//used stateless component syntax
@@ -47,7 +56,6 @@ $npm install --save react-router
 
 //create a new file in Components: AddDayForm.js
 (in AddDayForm.js)
-            //this will render just a simple h1 tag
             export const AddDayForm = () => (
 	<h1>Add A Day</h1>
             )
@@ -89,20 +97,29 @@ $npm install --save react-router
 		return allSkiDays.filter(
 			(day) => (filter) ? day[filter] : day).length
 	}
-	render() {//Our SkiDayList will render when we're on the list-days route and then our AddDayForm will 
-                      //render when we're on the add-day route. 
+	render() {//SkiDayList will render when we're on the list-days route
+		//and  AddDayForm will render when we're on the add-day route. 
 		return (
-			<div className="app"> //the following line is a nested ternary if statement. Notice carefully
+			<div className="app">
+			
+			
+			//the following line is a nested ternary if statement.
 			{
                                     (this.props.location.pathname === "/") ?
+			
 			  <SkiDayCount total={this.countDays()}
-                                                   powder={this.countDays("powder")}
-                                                   backcountry={this.countDays("backcountry")}/>
-                                    :
+                                       powder={this.countDays("powder")}
+                                       backcountry={this.countDays("backcountry")}/>
+                          :
+			  
 			 (this.props.location.pathname === "/add-day") ?
-			 	<AddDayForm /> : <SkiDayList days={this.state.allSkiDays}/>				 
+				 
+			<AddDayForm /> : 
+			<SkiDayList days={this.state.allSkiDays}/>				 
 			} //<SkiDayList /> Component is rendered if path is neither / or /add-day
 					
+			
+			
 			</div>
 		)
 	}
