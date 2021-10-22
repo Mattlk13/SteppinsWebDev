@@ -1,4 +1,4 @@
-//PS: House
+//PS: HouseCory
 
 Redux :    
 ES6 with babel 
