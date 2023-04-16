@@ -54,4 +54,4 @@ sectionElems.forEach(sectionElem => {
     
 });
 
-console.log(JSON.stringify(classroomToc));
+navigator.clipboard.writeText(JSON.stringify(classroomToc));
