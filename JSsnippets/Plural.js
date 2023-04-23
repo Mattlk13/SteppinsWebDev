@@ -13,6 +13,10 @@
 // jus write .href to get url
 // fetch times also
 // render in html liked linkdin
+
+
+
+//NOTE: u've to click 'expand all' button to reveal all contents (otherwise, titles are not loaded)
 courseData = {}
 document.querySelectorAll('h2.table-of-contents__title').forEach((x) => {
 	anchorsInThisSection = [];
