@@ -12,6 +12,9 @@ function hasLikesLabel(element) {
 
 document.querySelectorAll("article").forEach(eachArt => {
     eachArt.querySelectorAll("*").forEach(u => {//get all nested, and check if it ahs aria
-        if(hasLikesLabel(u)) console.log(u.ariaLabel)
+       if(hasLikesLabel(u)){
+                let twitLikes = parseInt(u.ariaLabel.match(/(\d+) likes/)[1]);
+                if(twitLikes > 2500) eachArt.style.backgroundColor = 'lightgreen'
+        }
     })
-})
+// })  
