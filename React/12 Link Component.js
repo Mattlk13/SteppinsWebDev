@@ -30,7 +30,7 @@ We'll use LINKS to construct a tiny navigation bar
               <ListDaysIcon />
             </Link>
           </nav>
-/* NOte: The other thing is you have added a property to each of these links called active class name.
+/* NOte: active class name.
 This means that when our link is active, so when it is selected, we're going to use the selected class, so this is going to
 draw directly from the css that we've already set up. And you can add these to everything. */
 
