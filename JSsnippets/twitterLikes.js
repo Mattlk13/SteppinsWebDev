@@ -17,4 +17,4 @@ document.querySelectorAll("article").forEach(eachArt => {
                 if(twitLikes > 2500) eachArt.style.backgroundColor = 'lightgreen'
         }
     })
-// })  
+ })  
