@@ -1,4 +1,6 @@
+//MegaTask: parse every tweet into properties like likes, name, url.....
 
+//task 1 : getting likes, comments, retweets
 //takes one elem, and checks
 function hasLikesLabel(element) {
   const ariaLabel = element.getAttribute('aria-label')
